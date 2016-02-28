@@ -1,0 +1,28 @@
+{
+  "name": "angular-harkka",
+  "description": "Angular karkkatyö. Käyttää NASAn apia, josta saa kivoja avaruuskuvia.",
+  "main": "index.js",
+  "authors": [
+    "Aleksanteri Hämäläinen"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "AngularJS",
+    "Harjoitustyö"
+  ],
+  "homepage": "https://github.com/4llu/Angular-harkka",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular": "^1.5.0"
+  }
+}
