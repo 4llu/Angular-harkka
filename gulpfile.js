@@ -1,5 +1,7 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");
+var autoprefixer = require("gulp-autoprefixer");
+var cleanCSS = require("gulp-clean-css");
 
 // Default
 gulp.task("default", ["styles", "watch"]);
@@ -7,11 +9,21 @@ gulp.task("default", ["styles", "watch"]);
 // compile sass
 gulp.task("styles", function () {
     return gulp.src("assets/styles/sass/style.scss")
+        // Sass
         .pipe(sass({
             includePaths: require("node-neat").includePaths,
             style: "compressed"
         }).on("error", sass.logError))
-        .pipe(gulp.dest("public/styles"));
+        // Prefixes
+        .pipe(autoprefixer({
+            browsers: ["> 1%"],
+            cascade: false
+        }))
+        // Minify
+        .pipe(cleanCSS({
+            compatibility: "ie8"
+        }))
+        .pipe(gulp.dest("assets/styles"));
 });
 
 // watch
