@@ -4,6 +4,7 @@
 // colors
 $txt-color: $dark;
 $o-link-color: $blue;
+$o-link-color: $main-color;
 
 // fonts
 $main-font: "Open sans", Arial, Helvetica, sans-serif;
@@ -100,6 +101,6 @@ a.o-link {
 	color: $o-link-color;
 
 	&:hover {
-		color: lighten($o-link-color, 10%);
+		color: lighten($o-link-color, 15%);
 	}
 }

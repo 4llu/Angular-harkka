@@ -1,0 +1,30 @@
+.nav-btns {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: $base-line-height 0;
+}
+
+.nav-btn {
+	width: 110px;
+	margin: 0 $base-line-height;
+	border: none;
+	border-radius: .15rem;
+	padding: .5em 1em;
+	text-transform: uppercase;
+	color: white;
+	background-color: $main-color;
+	transition: transition-length(0);
+
+	&:hover {
+		background-color: lighten($main-color, 10%);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&[disabled] {
+		background-color: $disabled-color;
+	}
+}

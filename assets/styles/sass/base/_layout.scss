@@ -1,7 +1,25 @@
 body {
-	padding: 0 10px;
+	// padding: 0 10px;
 }
 
 .main-content {
 	@include outer-container($page-max-width);
+	width: 95%;
+}
+
+.main-image {
+	display: block;
+	width: 100%;
+	height: 70vh;
+	margin: $base-line-height 0 0 0;
+
+	img {
+		display: block;
+		margin: auto;
+		max-height: 100%;
+	}
+}
+
+.nav-btns {
+
 }

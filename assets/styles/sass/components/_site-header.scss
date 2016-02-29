@@ -2,7 +2,9 @@ $footer-height: $base-line-height * 4;
 $site-link-color: $main-color;
 
 #site-header {
-	@include outer-container($page-max-width);
+	// @include outer-container($page-max-width);
+	width: 95%;
+	margin: auto;
 	box-sizing: border-box;
 	height: $footer-height;
 	padding: $base-line-height 0;
