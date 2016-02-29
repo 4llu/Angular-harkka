@@ -4,10 +4,12 @@
 	<meta charset="utf-8">
 	<title>Allu - Harkkatyö</title>
 	<!-- STYLE -->
-	<link href="/assets/styles/style.css">
+	<link href="/assets/styles/style.css" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
 	<!-- COMPONENTS -->
 	<script src="/assets/libs/angular/angular.min.js"></script>
-	<script src="/assets/libs/angular/angular-ui-router.min.js"></script>
+	<script src="/assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<!-- APP -->
 	<script src="/app/app.module.js"></script>
 	<script src="/app/app.config.js"></script>
@@ -16,16 +18,18 @@
 	<script src="/app/controllers/foaasController.js"></script>
 	<script src="/app/controllers/roverController.js"></script>
 </head>
-<body>
-	<header id="">
-		<nav>
-			<ul>
-				<li><a ui-sref="home">Home</a></li>
-				<li><a ui-sref="home">Apod</a></li>
-				<li><a ui-sref="home">Rover</a></li>
-				<li><a ui-sref="home">Foaas</a></li>
+<body ng-app="app">
+	<header id="site-header">
+		<nav class="site-navigation">
+			<ul class="site-links">
+				<li ui-sref-active="active"><a ui-sref="home">home</a></li>
+				<li ui-sref-active="active"><a ui-sref="apod">apod</a></li>
+				<li ui-sref-active="active"><a ui-sref="rover">rover</a></li>
+				<li ui-sref-active="active"><a ui-sref="foaas">foaas</a></li>
 			</ul>
 		</nav>
 	</header>
+
+	<div ui-view></div>
 </body>
 </html>

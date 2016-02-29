@@ -1,0 +1,28 @@
+// COLORS
+// ============================
+
+$orange: #F9690E;
+$blue: #03A1FF;
+$dark: #333;
+
+$main-color: $orange;
+
+// LAYOUT
+// =============================
+
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.3;
+$page-max-width: 960px;
+
+// OTHER
+// =============================
+
+$transition-length: (
+	-1: 0.05s,
+	0:  0.1s,
+	1:  0.2s
+);
+
+@function transition-length($level) {
+	@return map-get($transition-length, $level);
+}

@@ -1,0 +1,105 @@
+// VARIABLES
+// ====================
+
+// colors
+$txt-color: $dark;
+$o-link-color: $blue;
+
+// fonts
+$main-font: "Open sans", Arial, Helvetica, sans-serif;
+
+// font size
+$type-scale: (
+    -1: 0.75rem,
+    0: 1rem,
+    1: 1.333rem,
+    2: 1.777rem,
+    3: 2.369rem,
+    4: 3.157rem
+);
+
+// line height
+$line-heights: (
+    -1: $base-line-height,
+    0: $base-line-height,
+    1: $base-line-height * 2,
+    2: $base-line-height * 2,
+    3: $base-line-height * 2,
+    4: $base-line-height * 3
+);
+
+// FUNCTIONS
+// ====================
+
+// font size
+@function type-scale($level) {
+    @return map-get($type-scale, $level);
+}
+
+// line height
+@function line-height($level) {
+    @return map-get($line-heights, $level);
+}
+
+// combine
+@mixin type-setting($level: 0) {
+    font-size: type-scale($level);
+    line-height: line-height($level);
+}
+
+// MIXINS
+// ====================
+
+// neutral link
+%neutral-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+%neutral-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// ELEMENTS
+// ====================
+
+body {
+	color: $txt-color;
+    font-family: $main-font;
+    @include  type-setting(0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    @include type-setting(4);
+	text-align: center;
+}
+
+h2 {
+    @include type-setting(3);
+}
+
+p {
+    @include type-setting(0);
+}
+
+p.subtitle {
+	color: lighten($txt-color, 10%);
+	@include type-setting(1);
+	line-height: 1.7em;
+	text-align: center;
+}
+
+
+// Links
+a.o-link {
+	@extend %neutral-link;
+	color: $o-link-color;
+
+	&:hover {
+		color: lighten($o-link-color, 10%);
+	}
+}

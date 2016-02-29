@@ -1,0 +1,52 @@
+$footer-height: $base-line-height * 4;
+$site-link-color: $main-color;
+
+#site-header {
+	@include outer-container($page-max-width);
+	box-sizing: border-box;
+	height: $footer-height;
+	padding: $base-line-height 0;
+	background-color: white;
+}
+
+.nav.site-navigation {
+	height: 100%;
+
+}
+
+%site-link-underline {
+	border-bottom: 3px solid $site-link-color;
+}
+
+ul.site-links {
+	@extend %neutral-list;
+	display: flex;
+	justify-content: flex-end;
+	color: $site-link-color;
+	@include type-setting(1);
+	font-weight: 600;
+	// text-transform: capitalize;
+
+	li {
+		display: inline-block;
+		transition: transition-length(-1);
+
+		&:not(:last-of-type) {
+			margin-right: $base-line-height;
+		}
+
+		&:hover {
+			@extend %site-link-underline;
+			color: lighten($site-link-color, 20%);
+			border-color: lighten($site-link-color, 20%);
+		}
+
+		a {
+			@extend %neutral-link;
+		}
+	}
+
+	li.active {
+		@extend %site-link-underline;
+	}
+}

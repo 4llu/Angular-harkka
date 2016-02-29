@@ -1,0 +1,7 @@
+body {
+	padding: 0 10px;
+}
+
+.main-content {
+	@include outer-container($page-max-width);
+}

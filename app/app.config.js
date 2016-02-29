@@ -1,39 +1,36 @@
-(funtion() {
-    "use strict"
+angular
+    .module("app")
+    .config(config);
 
-    angular
-        .module("app")
-        .config(config)
 
-    function config($stateProvider, urlRouterProvider) {
+function config($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/");
 
-        $stateProvider
-            .state("home", {
-                url: "/",
-                templateUrl: "views/homeView.html"
-            })
+    $stateProvider
+        .state("home", {
+            url: "/",
+            templateUrl: "views/homeView.html"
+        })
 
-            .state("apod", {
-                url: "/apod",
-                templateUrl: "views/apodView.html",
-                controller: "ApodController",
-                controllerAs: "apod"
-            })
+        .state("apod", {
+            url: "/apod",
+            templateUrl: "views/apodView.html",
+            controller: "ApodController",
+            controllerAs: "apod"
+        })
 
-            .state("rover", {
-                url: "/rover",
-                templateUrl: "views/roverView.html",
-                controller: "RoverController",
-                controllerAs: "rover"
-            })
+        .state("rover", {
+            url: "/rover",
+            templateUrl: "views/roverView.html",
+            controller: "RoverController",
+            controllerAs: "rover"
+        })
 
-            .state("foaas", {
-                url: "/foaas",
-                templateUrl: "views/foaasView.html",
-                controller: "FoaasController",
-                controllerAs: "foaas"
-            });
-    }
-})();
+        .state("foaas", {
+            url: "/foaas",
+            templateUrl: "views/foaasView.html",
+            controller: "FoaasController",
+            controllerAs: "foaas"
+        });
+}
