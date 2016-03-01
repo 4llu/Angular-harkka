@@ -13,10 +13,9 @@
 
 .link-card {
 	height: 100%;
-	// border-top: 4px solid lighten($blue, 25%);
-	border-top: 4px solid lighten($main-color, 15%);
+	border-top: 5px solid lighten($main-color, 15%);
 	padding: 0 $base-line-height;
-	background-color: #EEE;
+	background-color: #F4F4F4;
 	color: $txt-color;
 	transition: transition-length(1);
 	box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.1);

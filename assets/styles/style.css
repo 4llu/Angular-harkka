@@ -468,9 +468,9 @@ ul.site-links {
 
 .link-card {
   height: 100%;
-  border-top: 4px solid #fb9759;
+  border-top: 5px solid #fb9759;
   padding: 0 1.3rem;
-  background-color: #EEE;
+  background-color: #F4F4F4;
   color: #333;
   -webkit-transition: 0.2s;
   transition: 0.2s;
